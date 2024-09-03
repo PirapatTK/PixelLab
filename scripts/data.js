@@ -50,3 +50,27 @@ const recentActivity = [
     }
 ];
 
+function recentActivityTable(data) {
+    const tableBody = document.getElementById('table-recent-body');
+    
+    // Clear any existing rows
+    tableBody.innerHTML = '';
+
+    // Loop through each item in the data array and create a table row
+    data.forEach(item => {
+        const row = document.createElement('tr');
+
+        // Loop through each property of the item object
+        for (let key in item) {
+            const cell = document.createElement('td');
+            cell.textContent = item[key];
+            row.appendChild(cell);
+        }
+
+        // Append the row to the table body
+        tableBody.appendChild(row);
+    });
+}
+
+// Populate the table when the page loads
+window.addEventListener('DOMContentLoaded', () => recentActivityTable(recentActivity));
