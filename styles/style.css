@@ -11,7 +11,9 @@
     --text-muted-color-light: hsl(var(--primary-hue), 25%, 45%);
     --surface-color-1-light:  hsl(var(--primary-hue), var(--primary-saturation), 100%);
     --surface-color-2-light:  hsl(var(--primary-hue), 20%, 95%);
-    --surface-primary-color-light: hsl(var(--primary-hue), 100%, 90%);
+    --surface-primary-color-light: hsl(var(--primary-hue), 70%, 85%);
+    --surface-secondary-color-light: hsla(40, 100%, 78%, 0.602);
+    --surface-tertiary-color-light: hsl(var(--primary-hue), 100%, 87%);
     --shadow-color-light: hsl(var(--primary-hue), 100%, 20% , 0.2);
 
     /* Dark Mode */
@@ -21,7 +23,9 @@
     --text-muted-color-dark: hsl(var(--primary-hue) 10% 55%);
     --surface-color-1-dark:  hsl(var(--primary-hue) 10% 10%);
     --surface-color-2-dark:  hsl(var(--primary-hue) 10% 15%);
-    --surface-primary-color-dark: hsl(var(--primary-hue) 100% 10%);
+    --surface-primary-color-dark: hsl(var(--primary-hue) 40% 10%);
+    --surface-secondary-color-dark: hsla(40, 73%, 40%, 0.114);
+    --surface-tertiary-color-dark: hsl(var(--primary-hue) 60% 12%);
     --shadow-color-dark: var(--primary-hue) 50% 3%;
 }
 
@@ -35,6 +39,8 @@
     --surface-color-1: var(--surface-color-1-light);
     --surface-color-2: var(--surface-color-2-light);
     --surface-primary-color: var(--surface-primary-color-light);
+    --surface-secondary-color: var(--surface-secondary-color-light);
+    --surface-tertiary-color: var(--surface-tertiary-color-light);
     --shadow-color: var(--shadow-color-light);
 }
 
@@ -49,6 +55,8 @@
         --surface-color-1: var(--surface-color-1-dark);
         --surface-color-2: var(--surface-color-2-dark);
         --surface-primary-color: var(--surface-primary-color-dark);
+        --surface-secondary-color: var(--surface-secondary-color-dark);
+        --surface-tertiary-color: var(--surface-tertiary-color-dark);
         --shadow-color: var(--shadow-color-dark);
     }
 }
@@ -63,6 +71,8 @@
     --surface-color-1: var(--surface-color-1-light);
     --surface-color-2: var(--surface-color-2-light);
     --surface-primary-color: var(--surface-primary-color-light);
+    --surface-secondary-color: var(--surface-secondary-color-light);
+    --surface-tertiary-color: var(--surface-tertiary-color-light);
     --shadow-color: var(--shadow-color-light);
 }
 
@@ -76,6 +86,8 @@
     --surface-color-1: var(--surface-color-1-dark);
     --surface-color-2: var(--surface-color-2-dark);
     --surface-primary-color: var(--surface-primary-color-dark);
+    --surface-secondary-color: var(--surface-secondary-color-dark);
+    --surface-tertiary-color: var(--surface-tertiary-color-dark);
     --shadow-color: var(--shadow-color-dark);
 }
 
@@ -242,9 +254,21 @@ a {
 }
 
 .box {
-    padding: 20px;
-    background-color: var(--surface-color-1);
+    padding: 40px 20px 40px 20px;
     border-radius: 15px;
+    margin: 5px;
+}
+
+.box:nth-child(1) {
+    background-color: var(--surface-primary-color);
+}
+
+.box:nth-child(2) {
+    background-color: var(--surface-secondary-color);
+}
+
+.box:nth-child(3) {
+    background-color: var(--surface-tertiary-color);
 }
 
 input[type="text"]{
@@ -273,4 +297,24 @@ button {
 
 .side-bar-switch:hover {
     color: var(--text-muted-color);
+}
+
+.metric i {
+    font-size: 2.4rem;
+    color: var(--text-body-color);
+    margin-bottom: 16px;
+}
+
+.metric h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text-body-color);
+}
+
+.metric p {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: var(--text-title-color);
 }
