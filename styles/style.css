@@ -1,3 +1,85 @@
+* {
+    /* Blue */
+    --primary-hue: 200;
+    --primary-saturation: 100%;
+    --primary-lightness: 50%;
+
+    /* Light Mode */
+    --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--brand-lightness));
+    --text-title-color: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+    --text-body-color:  hsl(var(--primary-hue), var(--primary-saturation), 20%);
+    --text-muted-color: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+    --surface-color-1:  hsl(var(--primary-hue), 20%, 90%);
+    --surface-color-2:  hsl(var(--primary-hue), 20%, 95%);
+    --surface-primary-color: hsl(var(--primary-hue), 100%, 90%);
+    --shadow-color: var(--primary-hue) 10% 20%;
+
+    /* Dark Mode */
+    --primary-dark: hsl(var(--primary-hue), calc(var(--primary-saturation) / 2), calc(var(--primary-lightness) / 1.5));
+    --text-title-color-dark: hsl(var(--primary-hue) 15% 85%);
+    --text-body-color-dark:  hsl(var(--primary-hue) 5% 65%);
+    --text-muted-color-dark: hsl(var(--primary-hue) 5% 45%);
+    --surface-color-1-dark:  hsl(var(--primary-hue) 10% 10%);
+    --surface-color-2-dark:  hsl(var(--primary-hue) 10% 15%);
+    --surface-primary-color-dark: hsl(var(--primary-hue) 100% 10%);
+    --shadow-color-dark: var(--primary-hue) 50% 3%;
+}
+
+:root {
+    color-scheme: light;
+    
+    --primary: var(--primary-light);
+    --text-title-color: var(--text-title-color);
+    --text-body-color: var(--text-body-color);
+    --text-muted-color: var(--text-muted-color);
+    --surface-color-1: var(--surface-color-1);
+    --surface-color-2: var(--surface-color-2);
+    --surface-primary-color: var(--surface-primary-color);
+    --shadow-color: var(--shadow-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+        
+        --primary: var(--primary-dark);
+        --text-title-color: var(--text-title-color-dark);
+        --text-body-color: var(--text-body-color-dark);
+        --text-muted-color: var(--text-muted-color-dark);
+        --surface-color-1: var(--surface-color-1-dark);
+        --surface-color-2: var(--surface-color-2-dark);
+        --surface-primary-color: var(--surface-primary-color-dark);
+        --shadow-color: var(--shadow-color-dark);
+    }
+}
+
+[color-scheme="light"] {
+    color-scheme: light;
+
+    --primary: var(--primary-light);
+    --text-title-color: var(--text-title-color);
+    --text-body-color: var(--text-body-color);
+    --text-muted-color: var(--text-muted-color);
+    --surface-color-1: var(--surface-color-1);
+    --surface-color-2: var(--surface-color-2);
+    --surface-primary-color: var(--surface-primary-color);
+    --shadow-color: var(--shadow-color);
+}
+
+[color-scheme="dark"] {
+    color-scheme: dark;
+
+    --primary: var(--primary-dark);
+    --text-title-color: var(--text-title-color-dark);
+    --text-body-color: var(--text-body-color-dark);
+    --text-muted-color: var(--text-muted-color-dark);
+    --surface-color-1: var(--surface-color-1-dark);
+    --surface-color-2: var(--surface-color-2-dark);
+    --surface-primary-color: var(--surface-primary-color-dark);
+    --shadow-color: var(--shadow-color-dark);
+}
+
+/* Reset CSS */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
