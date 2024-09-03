@@ -6,18 +6,18 @@
 
     /* Light Mode */
     --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--brand-lightness));
-    --text-title-color: hsl(var(--primary-hue), var(--primary-saturation), 10%);
-    --text-body-color:  hsl(var(--primary-hue), var(--primary-saturation), 20%);
-    --text-muted-color: hsl(var(--primary-hue), var(--primary-saturation), 30%);
-    --surface-color-1:  hsl(var(--primary-hue), 20%, 90%);
-    --surface-color-2:  hsl(var(--primary-hue), 20%, 95%);
-    --surface-primary-color: hsl(var(--primary-hue), 100%, 90%);
-    --shadow-color: var(--primary-hue) 10% 20%;
+    --text-title-color-light: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+    --text-body-color-light:  hsl(var(--primary-hue), var(--primary-saturation), 10%);
+    --text-muted-color-light: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+    --surface-color-1-light:  hsl(var(--primary-hue), 20%, 95%);
+    --surface-color-2-light:  hsl(var(--primary-hue), 20%, 95%);
+    --surface-primary-color-light: hsl(var(--primary-hue), 100%, 90%);
+    --shadow-color-light: var(--primary-hue) 10% 20%;
 
     /* Dark Mode */
     --primary-dark: hsl(var(--primary-hue), calc(var(--primary-saturation) / 2), calc(var(--primary-lightness) / 1.5));
     --text-title-color-dark: hsl(var(--primary-hue) 15% 85%);
-    --text-body-color-dark:  hsl(var(--primary-hue) 5% 65%);
+    --text-body-color-dark:  hsl(var(--primary-hue) 10% 80%);
     --text-muted-color-dark: hsl(var(--primary-hue) 5% 45%);
     --surface-color-1-dark:  hsl(var(--primary-hue) 10% 10%);
     --surface-color-2-dark:  hsl(var(--primary-hue) 10% 15%);
@@ -29,13 +29,13 @@
     color-scheme: light;
     
     --primary: var(--primary-light);
-    --text-title-color: var(--text-title-color);
-    --text-body-color: var(--text-body-color);
-    --text-muted-color: var(--text-muted-color);
-    --surface-color-1: var(--surface-color-1);
-    --surface-color-2: var(--surface-color-2);
-    --surface-primary-color: var(--surface-primary-color);
-    --shadow-color: var(--shadow-color);
+    --text-title-color: var(--text-title-color-light);
+    --text-body-color: var(--text-body-color-light);
+    --text-muted-color: var(--text-muted-color-light);
+    --surface-color-1: var(--surface-color-1-light);
+    --surface-color-2: var(--surface-color-2-light);
+    --surface-primary-color: var(--surface-primary-color-light);
+    --shadow-color: var(--shadow-color-light);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -57,13 +57,13 @@
     color-scheme: light;
 
     --primary: var(--primary-light);
-    --text-title-color: var(--text-title-color);
-    --text-body-color: var(--text-body-color);
-    --text-muted-color: var(--text-muted-color);
-    --surface-color-1: var(--surface-color-1);
-    --surface-color-2: var(--surface-color-2);
-    --surface-primary-color: var(--surface-primary-color);
-    --shadow-color: var(--shadow-color);
+    --text-title-color: var(--text-title-color-light);
+    --text-body-color: var(--text-body-color-light);
+    --text-muted-color: var(--text-muted-color-light);
+    --surface-color-1: var(--surface-color-1-light);
+    --surface-color-2: var(--surface-color-2-light);
+    --surface-primary-color: var(--surface-primary-color-light);
+    --shadow-color: var(--shadow-color-light);
 }
 
 [color-scheme="dark"] {
@@ -79,47 +79,50 @@
     --shadow-color: var(--shadow-color-dark);
 }
 
-/* Reset CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@font-face {
+    font-family: 'Kanit';
+    src: url('../assets/font/Kanit/Kanit-Light.ttf') format('truetype');
+    font-weight: 300; /* Light */
+    font-style: normal;
 }
 
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+@font-face {
+    font-family: 'Kanit';
+    src: url('../assets/font/Kanit/Kanit-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('../assets/font/Kanit/Kanit-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('../assets/font/Kanit/Kanit-Bold.ttf') format('truetype');
+    font-weight: 600; /* Bold */
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    block-size: 100%;
+    background-color: var(--surface-color-1);
+    color: var(--text-body-color);
+}
+
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
