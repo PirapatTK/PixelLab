@@ -333,6 +333,27 @@ table th {
     text-align: left;
 }
 
+/* Set minimum width for specific columns */
+table th:nth-child(1), table td:nth-child(1) {
+    min-width: 150px; /* Minimum width for Name column */
+}
+
+table th:nth-child(2), table td:nth-child(2) {
+    min-width: 200px; /* Minimum width for Email column */
+}
+
+table th:nth-child(3), table td:nth-child(3) {
+    min-width: 120px; /* Minimum width for Joined column */
+}
+
+table th:nth-child(4), table td:nth-child(4) {
+    min-width: 100px; /* Minimum width for Type column */
+}
+
+table th:nth-child(5), table td:nth-child(5) {
+    min-width: 100px; /* Minimum width for Status column */
+}
+
 table td {
     background-color: var(--surface-color-2);
     color: var(--text-muted-color);
@@ -344,6 +365,7 @@ table td {
     width: 100%;
     overflow-x: auto;
     margin: 15px 20px 0px 20px;
+    margin-bottom: 50px;
     scrollbar-width: none;
     -ms-overflow-style: none; 
 }
