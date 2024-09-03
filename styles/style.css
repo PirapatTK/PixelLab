@@ -368,7 +368,6 @@ table td {
 .table-box {
     width: 100%;
     overflow-x: auto;
-    margin: 15px 20px 0px 20px;
     margin-bottom: 50px;
     scrollbar-width: none;
     -ms-overflow-style: none; 
