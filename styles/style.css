@@ -74,6 +74,7 @@
     --surface-secondary-color: var(--surface-secondary-color-light);
     --surface-tertiary-color: var(--surface-tertiary-color-light);
     --shadow-color: var(--shadow-color-light);
+    --hover-color: var(--surface-color-1-light);
 }
 
 [color-scheme="dark"] {
@@ -89,6 +90,7 @@
     --surface-secondary-color: var(--surface-secondary-color-dark);
     --surface-tertiary-color: var(--surface-tertiary-color-dark);
     --shadow-color: var(--shadow-color-dark);
+    --hover-color: var(--surface-color-2-dark);
 }
 
 @font-face {
@@ -226,7 +228,7 @@ a {
 
 .nav-menu a:hover , .nav-menu button:hover {
     color: var(--text-body-color);
-    background-color: var(--surface-color-1);
+    background-color: var(--hover-color);
     box-shadow: 0px 3px 6px 0px var(--shadow-color);
 }
 
