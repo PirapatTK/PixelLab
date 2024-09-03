@@ -1,6 +1,6 @@
 * {
     /* Blue */
-    --primary-hue: 200;
+    --primary-hue: 205;
     --primary-saturation: 100%;
     --primary-lightness: 50%;
 
@@ -8,14 +8,14 @@
     --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
     --text-title-color-light: hsl(var(--primary-hue), var(--primary-saturation), 10%);
     --text-body-color-light:  hsl(var(--primary-hue), var(--primary-saturation), 18%);
-    --text-muted-color-light: hsl(var(--primary-hue), var(--primary-saturation), 30%);
-    --surface-color-1-light:  hsl(var(--primary-hue), 20%, 95%);
+    --text-muted-color-light: hsl(var(--primary-hue), 25%, 45%);
+    --surface-color-1-light:  hsl(var(--primary-hue), var(--primary-saturation), 100%);
     --surface-color-2-light:  hsl(var(--primary-hue), 20%, 95%);
     --surface-primary-color-light: hsl(var(--primary-hue), 100%, 90%);
-    --shadow-color-light: var(--primary-hue) 10% 20%;
+    --shadow-color-light: hsl(var(--primary-hue), 100%, 20% , 0.2);
 
     /* Dark Mode */
-    --primary-dark: hsl(var(--primary-hue), calc(var(--primary-saturation) / 2), calc(var(--primary-lightness) / 1.5));
+    --primary-dark: hsl(var(--primary-hue), calc(var(--primary-saturation) / 2), calc(var(--primary-lightness) / 1));
     --text-title-color-dark: hsl(var(--primary-hue) 15% 85%);
     --text-body-color-dark:  hsl(var(--primary-hue) 10% 80%);
     --text-muted-color-dark: hsl(var(--primary-hue) 5% 45%);
@@ -114,7 +114,7 @@
 
 html {
     block-size: 100%;
-    background-color: var(--surface-color-1);
+    background-color: var(--surface-color-2);
     color: var(--text-body-color);
 }
 
@@ -175,12 +175,36 @@ a {
     padding: 10px;
 }
 
-.nav-bar {
+.nav-menu {
+    padding-top: 20px;
+    margin: 0px 20px 0px 20px;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
-.side-bar {
-    height: 100dvh;
-    background-color: white;
+.nav-menu a {
+    border-radius: 10px;
+    color: var(--text-muted-color);
+    font-weight: 400;
+    font-size: 1.1rem;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: var(--text-body-color);
+    background-color: var(--surface-color-1);
+    box-shadow: 0px 3px 6px 0px var(--shadow-color);
+}
+
+.nav-menu a i {
+    width: 28px;
+}
+
+.side-bar-footer {
+    border-top: 1px solid var(--surface-color-2);
 }
