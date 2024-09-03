@@ -18,7 +18,7 @@
     --primary-dark: hsl(var(--primary-hue), calc(var(--primary-saturation) / 2), calc(var(--primary-lightness) / 1));
     --text-title-color-dark: hsl(var(--primary-hue) 15% 85%);
     --text-body-color-dark:  hsl(var(--primary-hue) 10% 80%);
-    --text-muted-color-dark: hsl(var(--primary-hue) 5% 45%);
+    --text-muted-color-dark: hsl(var(--primary-hue) 10% 55%);
     --surface-color-1-dark:  hsl(var(--primary-hue) 10% 10%);
     --surface-color-2-dark:  hsl(var(--primary-hue) 10% 15%);
     --surface-primary-color-dark: hsl(var(--primary-hue) 100% 10%);
@@ -175,6 +175,18 @@ a {
     padding: 10px;
 }
 
+.box-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
 .nav-menu {
     padding-top: 20px;
     margin: 0px 20px 0px 20px;
@@ -207,4 +219,18 @@ a {
 
 .side-bar-footer {
     border-top: 1px solid var(--surface-color-2);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.box {
+    padding: 20px;
+    background-color: var(--surface-color-1);
+    border-radius: 15px;
 }
