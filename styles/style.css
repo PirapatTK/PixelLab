@@ -244,6 +244,10 @@ a {
     border-top: 1px solid var(--surface-color-2);
 }
 
+#close-side-bar-mobile {
+    display: none;
+}
+
 .avatar {
     min-width: 50px;
     height: 50px;
