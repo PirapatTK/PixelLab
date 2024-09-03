@@ -187,6 +187,10 @@ a {
     color: white;
 }
 
+.aside-content {
+    width: 250px;
+}
+
 .nav-menu {
     padding-top: 20px;
     margin: 0px 20px 0px 20px;
@@ -218,6 +222,7 @@ a {
 }
 
 .side-bar-footer {
+    width: 250px;
     border-top: 1px solid var(--surface-color-2);
 }
 

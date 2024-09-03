@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/layout.css">
-    <script src="scripts/sidebar.js"></script>
     <link href="assets/fontawesome/css/fontawesome.css" rel="stylesheet" />
     <link href="assets/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="assets/fontawesome/css/solid.css" rel="stylesheet" />
+    <script src="scripts/sidebar.js"></script>
     <title>PixelLab</title>
 </head>
 
 <body>
-    <aside class="flex-col-between side-bar">
-        <section>
+    <aside class="flex-col-between" id="side-bar">
+        <section class="aside-content">
             <div class="flex-row">
                 <div class="logo">PL</div>
                 <h1 class="text-xl">PixelLab</h1>
@@ -60,9 +60,9 @@
             </div>
         </section>
     </aside>
-    <div class="content">
+    <div class="content" id="content-body">
         <section class="flex-row">
-            <button class="side-bar-switch">
+            <button class="side-bar-switch" onclick="toggleSideBar()">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <input type="text" placeholder="Search here...">
