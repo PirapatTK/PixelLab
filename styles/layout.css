@@ -70,3 +70,21 @@
     transition: margin-left 0.5s;
     padding: 16px 30px 16px 30px;
 }
+
+@media (max-width: 768px) {
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .grid-3 > :nth-child(3) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 524px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
