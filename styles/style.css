@@ -323,7 +323,6 @@ button {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 15px 20px 0px 20px;
 }
 
 table th {
@@ -339,6 +338,14 @@ table td {
     color: var(--text-muted-color);
     font-weight: 300;
     padding: 5px;
+}
+
+.table-box {
+    width: 100%;
+    overflow-x: auto;
+    margin: 15px 20px 0px 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
 
 

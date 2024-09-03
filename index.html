@@ -19,7 +19,7 @@
     <!-- SIDE BAR -->
     <aside class="flex-col-between" id="side-bar">
         <section class="aside-content">
-            <div class="flex-row">
+            <div class="flex-row" id="logo-title">
                 <div class="logo">PL</div>
                 <h1 class="text-xl">PixelLab</h1>
             </div>
@@ -111,20 +111,22 @@
                 </div>
                 <h2 class="text-lg">Recent Activity</h2>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Joined</th>
-                        <th>Type</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody id="table-recent-body">
-                    <!-- DATA WILL BE LOADED HERE IN data.js -->
-                </tbody>
-            </table>
+            <div class="table-box">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Joined</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-recent-body">
+                        <!-- DATA WILL BE LOADED HERE IN data.js -->
+                    </tbody>
+                </table>
+            </div>
         </section>
     </div>
 </body>

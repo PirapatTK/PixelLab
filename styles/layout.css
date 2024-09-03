@@ -71,6 +71,30 @@
     padding: 16px 30px 16px 30px;
 }
 
+@media (max-width: 1024px) {
+    #side-bar {
+        width: 200px;
+        max-width: 200px;
+    }
+
+    .aside-content {
+        width: 200px;
+    }
+
+    .content {
+        margin-left: 200px;
+    }
+
+    #logo-title .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    #logo-title h1 {
+        font-size: 1.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .grid-3 {
         display: grid;

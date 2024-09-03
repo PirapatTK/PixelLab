@@ -1,23 +1,51 @@
-function toggleSideBar() {
-    // Get the width of the side bar
-    var sideBar = document.getElementById("side-bar");
-    var sideBarWidth = window.getComputedStyle(sideBar).width;
-
-    if (sideBarWidth === "250px") {
-        closeNav();
-    } else {
-        openNav();
+document.addEventListener('DOMContentLoaded', () => {
+    const sideBar = document.getElementById("side-bar");
+    if (!sideBar) {
+        return;
     }
-}
 
-function openNav() {
-    // Set the width of the side bar to 250px (Open)
-    document.getElementById("side-bar").style.width = "250px";
-    document.getElementById("content-body").style.marginLeft = "250px";
-}
+    let sideBarSize = "250px";
 
-function closeNav() {
-    // Set the width of the side bar to 0 (Close)
-    document.getElementById("side-bar").style.width = "0";
-    document.getElementById("content-body").style.marginLeft = "0";
-}
+    // set sidebar size based on screen width
+    function setSidebarSize() {
+        if (window.innerWidth < 1024) {
+            sideBarSize = "200px";
+        } else {
+            sideBarSize = "250px";
+        }
+
+        if (sideBar.style.width !== "0px") {
+            sideBar.style.width = sideBarSize;
+            document.getElementById("content-body").style.marginLeft = sideBarSize;
+        }
+    }
+
+    function toggleSideBar() {
+        const sideBarWidth = window.getComputedStyle(sideBar).width;
+        
+        if (sideBarWidth === "0px") {
+            openNav();
+        } else {
+            closeNav();
+        }
+    }
+
+    function openNav() {
+        sideBar.style.width = sideBarSize;
+        document.getElementById("content-body").style.marginLeft = sideBarSize;
+    }
+    
+    function closeNav() {
+        sideBar.style.width = "0";
+        document.getElementById("content-body").style.marginLeft = "0";
+    }
+
+    // Set initial sidebar size when page loads
+    setSidebarSize();
+
+    // Update sidebar size when the window is resized
+    window.addEventListener('resize', setSidebarSize);
+
+    // Expose toggleSideBar function to global scope if needed
+    window.toggleSideBar = toggleSideBar;
+});
