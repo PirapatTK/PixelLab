@@ -5,9 +5,9 @@
     --primary-lightness: 50%;
 
     /* Light Mode */
-    --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--brand-lightness));
+    --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
     --text-title-color-light: hsl(var(--primary-hue), var(--primary-saturation), 10%);
-    --text-body-color-light:  hsl(var(--primary-hue), var(--primary-saturation), 10%);
+    --text-body-color-light:  hsl(var(--primary-hue), var(--primary-saturation), 18%);
     --text-muted-color-light: hsl(var(--primary-hue), var(--primary-saturation), 30%);
     --surface-color-1-light:  hsl(var(--primary-hue), 20%, 95%);
     --surface-color-2-light:  hsl(var(--primary-hue), 20%, 95%);
@@ -125,4 +125,62 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-title-color);
+    font-weight: 500;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.text-md {
+    font-size: 1.125rem;
+}
+
+.text-lg {
+    font-size: 1.25rem;
+}
+
+.text-xl {
+    font-size: 1.6rem;
+}
+
+a {
+    color: var(--text-body-color);
+    text-decoration: none;
+}
+
+/* STYLES */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar {
+    height: 100dvh;
+    background-color: white;
 }
