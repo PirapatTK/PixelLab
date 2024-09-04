@@ -127,7 +127,7 @@
 
     .content {
         margin-left: 0px;
-        padding: 16px 15px 16px 15px;
+        gap: 10px;
     }
 
     .avatar {
@@ -142,6 +142,10 @@
 
     #content-body {
         margin-left: 0px;
+    }
+
+    #recent-activity-table {
+        margin-top: 20px;
     }
 
     #logo-title .logo {
