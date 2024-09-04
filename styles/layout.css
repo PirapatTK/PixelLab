@@ -48,6 +48,7 @@
 }
 
 #side-bar {
+    touch-action: manipulation;
     padding: 20px 0px 20px 0px;
     height: 100dvh;
     width: 250px;
