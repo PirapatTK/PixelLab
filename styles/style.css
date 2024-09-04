@@ -289,14 +289,24 @@ input[type="text"]{
 }
 
 button {
-    background-color: transparent;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: inherit;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    color: inherit;
+    font: inherit;
 }
 
 .side-bar-switch {
+    padding: 5px;
     font-size: 1.6rem;
     color: var(--text-body-color);
     margin-right: 10px;

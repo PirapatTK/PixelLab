@@ -68,7 +68,7 @@
     gap: 30px;
     height: 100vh;
     margin-left: 250px;
-    transition: margin-left 0.5s, filter 0.5s, background-color 0.1s;
+    transition: margin-left 0.5s, filter 0.5s;
     padding: 16px 30px 16px 30px;
     background-color: var(--surface-color-2);
 }
@@ -100,9 +100,17 @@
     #logo-title h1 {
         font-size: 1.2rem;
     }
+
+    .side-bar-footer {
+        width: 200px;
+    }
 }
 
 @media (max-width: 768px) {
+    .flex-row {
+        gap: 5px;
+    }
+
     .grid-3 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -113,8 +121,23 @@
         grid-column: 1 / -1;
     }
 
+    #side-bar {
+        width: 0px;
+    }
+
     .content {
         margin-left: 0px;
+        padding: 16px 15px 16px 15px;
+    }
+
+    .avatar {
+        min-width: 45px;
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    .side-bar-switch {
+        margin-right: 5px;
     }
 
     #content-body {
