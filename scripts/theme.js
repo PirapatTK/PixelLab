@@ -6,7 +6,9 @@ function toggleTheme() {
 
     // If there is a theme set, toggle the theme
     if (currentTheme) {
-        currentTheme === 'light' ? setTheme('dark') : setTheme('light');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Save theme to local storage
     } else {
         // If no theme set, set the theme based on the system theme
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -27,10 +29,15 @@ function handleSystemThemeChange(event) {
 
 // Set the theme based on the system theme when the page loads
 window.addEventListener('DOMContentLoaded', () => {
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    setTheme(systemTheme);
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        setTheme(systemTheme);
+    }
 
-    // ฟังการเปลี่ยนแปลงของธีมระบบและอัปเดตธีม
+    // Listen for system theme changes and update the theme
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleSystemThemeChange);
 });
 
